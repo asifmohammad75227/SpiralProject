@@ -1,0 +1,24 @@
+<p>view works!</p>
+<table class="table table-dark table-striped-columns">
+  <thead>
+    <tr style="font-weight: 200px; margin:1px;text-align: center;">
+
+      <td>AssignmentId</td>
+      <td>AssignmentName</td>
+      <td>Add Question</td>
+      <td></td>
+
+    </tr>
+  </thead>
+  <tbody *ngFor="let t of AssignmentList" >
+    <tr style="text-align: center;">
+      <td>{{t.assignmentId}}</td>
+      <td>{{t.assignmentName}}</td>
+      <td><button (click)="AddQuestion(t.assignmentId)"  >Add Question</button></td>
+
+
+
+
+    </tr>
+  </tbody>
+</table>

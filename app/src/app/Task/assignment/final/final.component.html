@@ -1,0 +1,18 @@
+<p>final works!</p>
+<form [formGroup]="studentForm" (ngSubmit)="assignmentAdd()"   style="width: 30%;">
+  <select class="form-ctrl form-control _select_arrow custom-select" formControlName="emailId" >
+    <option value="">Select student<option>
+    <option *ngFor="let country of studentList" value="{{ country.emailId }}">
+      {{ country.name }}
+    </option>
+  </select>
+  <select class="form-ctrl form-control _select_arrow custom-select" formControlName="assignmentId" >
+    <option value="">Select student<option>
+    <option *ngFor="let country of AssignmentList" value="{{ country.assignmentId }}">
+      {{ country.assignmentName }}
+    </option>
+  </select>
+
+  <div class="col-12"> <button class="btn btn-primary w-100" type="submit" [disabled]="studentForm.invalid">submit</button></div>
+  </form>
+

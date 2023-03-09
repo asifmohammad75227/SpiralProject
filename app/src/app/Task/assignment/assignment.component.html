@@ -1,0 +1,28 @@
+<p>assignment works!</p>
+
+
+
+
+
+                      <form class="row g-3" [formGroup]="assignmentForm" (ngSubmit)="add()" style="width: 50%;margin-left: 30%;" >
+
+
+
+                           <label for="yourUsername" class="form-label">assignment Id</label>
+                           <div class="input-group has-validation">
+                              <span class="input-group-text" id="inputGroupPrepend"><i class="fa-solid fa-user"></i></span>
+                               <input type="text" placeholder="AssignmentId" class="form-control" formControlName="assignmentId" required>
+                              </div>
+                               <label for="yourUsername" class="form-label">assignment name</label>
+                           <div class="input-group has-validation">
+                              <span class="input-group-text" id="inputGroupPrepend"><i class="fa-solid fa-user"></i></span>
+                               <input type="text" placeholder="assignment name" class="form-control" formControlName="assignmentName" required>
+
+</div>
+                               <div class="col-12"> <button class="btn btn-primary w-100" type="submit" [disabled]="assignmentForm.invalid">Add Assignment</button></div>
+
+
+  </form>
+
+
+
